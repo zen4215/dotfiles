@@ -1,0 +1,11 @@
+
+[audqt]
+icon_theme=audacious-flat-dark
+theme=dark
+
+[qtui]
+player_height=726
+player_width=1236
+
+[skins]
+skin=/usr/share/audacious/Skins/Default
