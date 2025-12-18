@@ -1,0 +1,20 @@
+theme = "gruvbox_dark_hard"
+
+[editor]
+true-color = true
+cursorline = true
+color-modes = true
+line-number = "relative"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+
+[keys.normal]
+y = ":clipboard-yank" 
+p = ":clipboard-paste-before" 
+
