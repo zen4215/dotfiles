@@ -52,6 +52,19 @@ window#waybar.main .modules-center {
   color     : @bg0;
 }
 
+#pulseaudio {
+  color: @red; 
+}
+#backlight {
+  color: @yellow;
+}
+#network {
+  color: @blue;
+}
+#battery {
+  color: @green;
+}
+
 tooltip {
   background: rgba(40, 40, 40, 0.8);
   
