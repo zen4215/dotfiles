@@ -1,2 +1,84 @@
+[
 {
+	"name": "overlay",
+	"height": 30,
+	"width": 300,
+
+	"margin-top": -30,
+	"layer": "bottom",
+	"position": "top",
+	"exclusive": false,
+	"passthrough": true,
+	"modules-center": ["custom/cava"],
+
+	"custom/cava": {
+		"format": "{}",
+		"exec": "~/.config/waybar/cava.sh",
+		"restart-interval": 1,
+		"tooltip": false
+	}
+},
+{
+	"layer": "top",
+	"position": "top",
+	"height": 30,
+
+	"modules-left": [
+		"clock",
+		"hyprland/workspaces"
+	],
+	"modules-center": [
+		"custom/playerinfo"
+	],
+	"modules-right": [
+		"pulseaudio",
+		"backlight",
+		"network",
+		"battery"
+	],
+
+	"clock": {
+		"interval": 2,
+		"format": "{:%H:%M}",
+		"tooltip-format": "{:%a %m %d}"
+	},
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"active": "",
+			"default": ""
+		}
+	},
+
+	"custom/playerinfo": {
+		"exec": "~/.config/waybar/playerinfo.sh",
+		"interval": 2
+	},
+	
+	"pulseaudio": {
+		"format": "",
+		"tooltip-format": "{volume}%"
+	},
+	"backlight": {
+		"format": "",
+		"scroll-step": 10.0,
+		"tooltip-format": "{percent}%"
+	},
+	"network": {
+		"format": "networkstate",
+		"format-wifi": "{icon}",
+		"format-icons": ["󱚵", "󰖩", "󱚽"],
+		"format-ethernet": "",
+		"format-disconnected": "󰌙",
+		"tooltip-format-wifi": "{essid}",
+		"tooltip-format-ethernet": "{ifname}",
+		"tooltip-format-disconnected": "disconnected",
+		"on-click": "alacritty --command nmtui"
+	},
+	"battery": {
+		"format": "{icon}",
+		"format-charging": "󰂄",
+		"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰂀", "󰂁", "󰂁", "󰂂", "󰁹"]
+	}
 }
+]
