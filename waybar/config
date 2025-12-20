@@ -7,6 +7,10 @@
 
 		"height": 30,
 
+		"margin-top"  : 5,
+		"margin-left" : 10,
+		"margin-right": 10,
+
 		"modules-left": [
 			"clock",
 			"hyprland/workspaces"
@@ -36,8 +40,10 @@
 		},
 
 		"custom/musicinfo": {
+			"format"  : "{:^44}",
 			"interval": 2,
-			"exec"    : "~/.config/waybar/scripts/musicinfo.sh"
+			"exec"    : "~/.config/waybar/scripts/musicinfo.sh",
+			"tooltip" : false
 		},
 
 		"pulseaudio": {
@@ -73,7 +79,7 @@
 
 		"layer"     : "bottom",
 		"position"  : "top",
-		"margin-top": -30,
+		"margin-top": -25,
 
 		"exclusive"  : false,
 		"passthrough": true,

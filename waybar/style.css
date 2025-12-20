@@ -1,0 +1,64 @@
+/* gruvbox color define */
+@define-color bg0    #282828;
+@define-color bg1    #3c3836;
+@define-color fg0    #fbf1c7;
+@define-color red    #fb4934;
+@define-color green  #b8bb26;
+@define-color yellow #fabd2f;
+@define-color blue   #83a598;
+@define-color purple #d3869b;
+@define-color aqua   #8ec07c;
+@define-color orange #fe8019;
+
+/* all reset & background transparency*/
+* {
+  border       : none;
+  border-radius: 0;
+}
+
+window#waybar {
+  background-color: rgba(0, 0, 0, 0);
+  color           : @fg0;
+}
+
+/* mudules config */
+window#waybar.main .modules-left,
+window#waybar.main .modules-center,
+window#waybar.main .modules-right {  
+  background-color: rgba(60, 56, 54, 0.8);
+  border          : 1.5px solid @fg0 ;
+  border-radius   : 5px;
+}
+window#waybar.main .modules-center {
+  min-width: 324px;
+}
+
+#clock,
+#pulseaudio,
+#backloght,
+#network {
+  margin-right: 10px;
+  margin-left : 10px;
+}
+#battery {
+  margin-right: 10px;
+  margin-left : 8px;
+}
+#workspaces button {
+  color: @fg0; 
+}
+#workspaces button:hover {
+  background: @fg0;
+  color     : @bg0;
+}
+
+tooltip {
+  background: rgba(40, 40, 40, 0.8);
+  
+  border       : 1.5px solid @fg0;
+  border-radius: 5px;
+}
+tooltip label {
+  color : @fg0;
+}
+
